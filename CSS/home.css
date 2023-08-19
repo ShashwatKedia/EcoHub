@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary_color: #ffb4e2;
+  --primary_color_dark: #e664b4;
+  --text_color: rgb(227, 227, 227);
+  --bg_color: linear-gradient(to right, #c7eded, #fce4e4);
+  --secondary_color: #314cc8;
+}
+
+/* Welcome Section */
+.welcome {
+  position: relative;
+  background-image: url(../Images/background_welcome.png);
+  height: 85vh;
+  color: var(--secondary_color);
+  width: 100vw;
+  background-size: 100vw;
+  z-index: 11;
+}
+
+.welcome_heading {
+  position: absolute;
+  top: 200px;
+  left: 80px;
+  font-size: 42px;
+  width: 40vw;
+  font-weight: bolder;
+}
+
+.welcome_text1 {
+  position: absolute;
+  top: 255px;
+  left: 85px;
+  font-size: 20px;
+  width: 45vw;
+}
+
+.welcome_text2 {
+  position: absolute;
+  top: 350px;
+  left: 90px;
+  font-size: 20px;
+  width: 50vw;
+}
+
+.welcome_img {
+  width: 70vw;
+}
+
+.join_us_btn {
+  width: 90px;
+  height: 45px;
+  background-color: var(--secondary_color);
+  position: absolute;
+  top: 31vw;
+  left: 85px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.join_us_btn_link {
+  color: var(--text_color);
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 1s ease;
+}
+
+.join_us_btn_link:hover {
+  color: var(--primary_color);
+}
+
+/* Clouds */
+.clouds_img {
+  position: absolute;
+  left: -300px;
+  z-index: -110;
+}
+
+.cloud1 {
+  top: 5vh;
+  width: 200px;
+  height: 75px;
+  animation: loop_cloud1 15s 2s linear infinite;
+}
+
+.cloud2 {
+  top: 25vh;
+  width: 100px;
+  height: 50px;
+  animation: loop_cloud2 10s 0s linear infinite;
+  opacity: 0.8;
+}
+
+.cloud3 {
+  top: 40vh;
+  width: 150px;
+  height: 75px;
+  animation: loop_cloud3 13s 0s linear infinite;
+}
+
+.cloud4 {
+  top: 60vh;
+  width: 200px;
+  height: 100px;
+  animation: loop_cloud4 12s 4s linear infinite;
+}
+
+@keyframes loop_cloud1 {
+  0% {
+    left: 100vw;
+  }
+  100% {
+    left: -5vw;
+  }
+}
+
+@keyframes loop_cloud2 {
+  0% {
+    left: 5vw;
+  }
+  100% {
+    left: 110vw;
+  }
+}
+
+@keyframes loop_cloud3 {
+  0% {
+    left: 105vw;
+  }
+  100% {
+    left: -30vw;
+  }
+}
+
+@keyframes loop_cloud4 {
+  0% {
+    left: 0vw;
+  }
+  100% {
+    left: 100vw;
+  }
+}
+
+@keyframes loop_cloud5 {
+  0% {
+    left: 105vw;
+  }
+  100% {
+    left: -30vw;
+  }
+}
+
+/* About Section */
+
+.about_us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background: var(--bg_color);
+  margin-top: 10vw;
+}
+
+.about_us_heading {
+  text-align: center;
+  font-size: 50px;
+  color: var(--secondary_color);
+  width: 85vw;
+  font-weight: bold;
+}
+
+.about_us_para {
+  color: var(--secondary_color);
+  font-size: 20px;
+  padding: 15px;
+  text-align: justify;
+  width: 85vw;
+  letter-spacing: 1.5px;
+}
+
+.typing_div {
+  display: flex;
+}
+
+.typing_div .static-txt {
+  color: var(--primary_color_dark);
+  font-size: 60px;
+  font-weight: 400;
+}
+
+.typing_div .dynamic-txts {
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+
+.dynamic-txts li {
+  list-style: none;
+  color: var(--secondary_color);
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: typing_anim 12s steps(4) infinite;
+}
+
+@keyframes typing_anim {
+  100% {
+    top: -360px;
+  }
+}
+
+.dynamic-txts li span {
+  position: relative;
+  margin: 5px 0;
+  line-height: 80px;
+}
+.dynamic-txts li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--bg_color);
+  border-left: 2px solid var(--secondary_color);
+  animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 30px);
+  }
+  100% {
+    left: 0;
+  }
+}
+
+/* Visit Us */
+.visit_us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.visit_us_heading {
+  text-align: center;
+  font-size: 50px;
+  color: var(--secondary_color);
+  width: 85vw;
+  font-weight: bold;
+  margin: 20px 0px;
+}
+
+.location {
+  width: 40vw;
+  height: 40vh;
+}
+
+.location_div {
+  display: flex;
+  align-items: center;
+  width: 85vw;
+}
+
+.address_location {
+  font-size: 25px;
+  width: 35vw;
+  margin-left: 8vw;
+  color: var(--primary_color_dark);
+}
+
+.address_location_head {
+  font-size: 35px;
+  width: 40vw;
+  margin: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: var(--secondary_color);
+}
+
+/* Global Classes */
+.heading {
+  text-align: center;
+  font-size: 50px;
+  color: var(--secondary_color);
+  font-weight: bolder;
+}

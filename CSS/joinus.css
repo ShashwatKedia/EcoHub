@@ -1,0 +1,30 @@
+
+
+:root{
+    --primary_color: #FFB4E2;
+    --primary_color_dark: #e664b4;
+    --text_color: rgb(227, 227, 227);
+    --bg_color: linear-gradient(to right, #C7EDED,#FCE4E4);
+    --secondary_color: #314CC8;
+}
+
+.joinus_form{
+    position: absolute;
+    top: 30vw;
+    left: 85px;
+}
+
+.joinus_form > input{
+    border: 1.5px solid var(--primary_color_dark);
+    border-radius: 5px;
+    height: 40px;
+    display: inline-block;
+    padding: 0px 5px;
+    color: var(--primary_color_dark);
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.joinus_form > .submit{
+    width: 100px;
+}

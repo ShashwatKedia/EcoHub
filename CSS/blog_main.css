@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --primary_color: #FFB4E2;
+    --primary_color_dark: #e664b4;
+    --text_color: rgb(227, 227, 227);
+    --bg_color: linear-gradient(to right, #C7EDED,#FCE4E4);
+    --secondary_color: #314CC8;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog_section{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.blog_heading{
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--secondary_color);
+}
+
+.blog_img{
+    width: 65vw;
+    height: 45vw;
+    margin: 30px 0px;
+}
+
+.blog_subheading{
+    width: 80vw;
+    font-weight: bold;
+    margin-top: 50px;
+    font-size: 25px;
+    color: var(--primary_color_dark);
+    text-align: start;
+}
+
+
+.blog_para{
+    width: 80vw;
+    margin-top: 10px;
+    font-size: 18px;
+    color: var(--secondary_color);
+    text-align: justify;
+}
